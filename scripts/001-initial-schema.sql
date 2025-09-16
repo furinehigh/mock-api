@@ -11,7 +11,7 @@ CREATE TABLE users (
     email VARCHAR(255) UNIQUE NOT NULL,
     name VARCHAR(255) NOT NULL,
     avatar_url TEXT,
-    provider VARCHAR(50) NOT NULL DEFAULT 'whatsyourinfo',
+    provider VARCHAR(50) NOT NULL DEFAULT 'github',
     provider_id VARCHAR(255) NOT NULL,
     plan VARCHAR(50) NOT NULL DEFAULT 'free',
     settings JSONB DEFAULT '{}',
