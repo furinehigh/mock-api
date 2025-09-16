@@ -85,7 +85,7 @@ const checklistItems: ChecklistItem[] = [
   {
     id: "blog-integration",
     title: "Blog Integration",
-    description: "DITblogs integration with posts and categories",
+    description: "blogs integration with posts and categories",
     category: "Frontend",
     priority: "low",
     status: "complete",
@@ -135,7 +135,7 @@ const checklistItems: ChecklistItem[] = [
   {
     id: "webhook-api",
     title: "Webhook APIs",
-    description: "DITblogs webhook for blog updates",
+    description: "blogs webhook for blog updates",
     category: "Backend",
     priority: "medium",
     status: "complete",
@@ -319,8 +319,8 @@ const checklistItems: ChecklistItem[] = [
 
   // Integrations
   {
-    id: "ditblogs-integration",
-    title: "DITblogs Integration",
+    id: "blogs-integration",
+    title: "blogs Integration",
     description: "Complete blog system integration",
     category: "Integrations",
     priority: "low",

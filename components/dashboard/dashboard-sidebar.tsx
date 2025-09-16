@@ -66,7 +66,7 @@ export function DashboardSidebar() {
             <Zap className="h-6 w-6 text-sidebar-primary animate-pulse-glow" />
             <div>
               <h1 className="font-bold text-sidebar-foreground">MOCK</h1>
-              <p className="text-xs text-sidebar-foreground/60">by DIT</p>
+              <p className="text-xs text-sidebar-foreground/60">API</p>
             </div>
           </div>
         )}

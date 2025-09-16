@@ -6,7 +6,7 @@ import { Users, Shield, FolderOpen, Activity } from "lucide-react"
 
 export function TeamOverview() {
   const orgStats = {
-    name: "DIT Technologies",
+    name: "DIT",
     plan: "Enterprise",
     members: 24,
     activeProjects: 12,

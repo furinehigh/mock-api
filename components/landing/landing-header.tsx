@@ -19,7 +19,7 @@ export function LandingHeader() {
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">MOCK</h1>
-              <p className="text-xs text-muted-foreground">by DIT</p>
+              <p className="text-xs text-muted-foreground">API</p>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ export function LandingFooter() {
               <Zap className="h-6 w-6 text-primary" />
               <div>
                 <h3 className="font-bold">MOCK</h3>
-                <p className="text-xs text-muted-foreground">by DIT</p>
+                <p className="text-xs text-muted-foreground">API</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs">
