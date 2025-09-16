@@ -8,7 +8,7 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=postgresql://postgres:password@postgres:5432/mockbydit
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/mockapi
       - REDIS_URL=redis://redis:6379
       - NEXTAUTH_URL=http://localhost:3000
       - NEXTAUTH_SECRET=your-secret-here
@@ -19,13 +19,13 @@ services:
       - ./uploads:/app/uploads
     restart: unless-stopped
     networks:
-      - mockbydit-network
+      - mockapi-network
 
   # PostgreSQL database
   postgres:
     image: postgres:15-alpine
     environment:
-      - POSTGRES_DB=mockbydit
+      - POSTGRES_DB=mockapi
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
     volumes:
@@ -35,7 +35,7 @@ services:
       - "5432:5432"
     restart: unless-stopped
     networks:
-      - mockbydit-network
+      - mockapi-network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
@@ -51,7 +51,7 @@ services:
       - redis_data:/data
     restart: unless-stopped
     networks:
-      - mockbydit-network
+      - mockapi-network
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s
@@ -64,14 +64,14 @@ services:
     command: node worker.js
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=postgresql://postgres:password@postgres:5432/mockbydit
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/mockapi
       - REDIS_URL=redis://redis:6379
     depends_on:
       - postgres
       - redis
     restart: unless-stopped
     networks:
-      - mockbydit-network
+      - mockapi-network
 
   # Nginx reverse proxy
   nginx:
@@ -86,12 +86,12 @@ services:
       - app
     restart: unless-stopped
     networks:
-      - mockbydit-network
+      - mockapi-network
 
 volumes:
   postgres_data:
   redis_data:
 
 networks:
-  mockbydit-network:
+  mockapi-network:
     driver: bridge
